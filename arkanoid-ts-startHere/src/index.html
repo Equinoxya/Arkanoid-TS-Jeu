@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Typescript App</title>
+  </head>
+  <body style="display: flex;">
+    <div id="main" class="main">
+      <canvas id="playField" width="1000" height="600"></canvas>
+      <div id="background" 
+      style="background-color: black;
+        height: 600px; 
+        display: flex; 
+        align-items: center;
+        justify-content: center;">
+
+        <div id="info" style="color: white;">Press play!</div>
+      </div>
+      <div id="display" style="display: flex; align-items: center; justify-content: center;">
+        <button id="start" class="button-62">Start</button>
+      </div>
+    </div>
+    <script src="./index.ts"></script>
+  </body>
+  <style>
+    :root {
+      --width: 1000px;
+      --height: 650px;
+    }
+
+    #main {
+      position: relative;
+      width: 1000px;
+      margin: 0 auto;
+      width: var(--width);
+      height: var(--height);
+      font-size: 32px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+/* CSS */
+.button-62 {
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.button-62:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-62:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+    canvas {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 10;
+      border-top: 1px solid grey;
+      border-left: 1px solid grey;
+      border-right: 1px solid grey;
+      margin-bottom: 40px;
+    }
+
+    #display {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      width: var(--width);
+    }
+
+    #score,
+    #info {
+      width: 200px;
+    }
+  </style>
+</html>
