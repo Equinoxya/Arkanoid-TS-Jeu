@@ -3,7 +3,10 @@ import { Vector } from "~/types";
 
 // Déclaration de la classe Ball (Balle)
 export class Ball { 
-    // Propriétés privées
+    // Propriétés privées En TypeScript (TS), 
+    //une propriété privée est une propriété d'une classe qui ne peut être accessible qu'à l'intérieur de cette classe. 
+    //Cela signifie qu'elle ne peut pas être lue ou modifiée directement depuis l'extérieur de la classe.  
+    //TypeScript permet de définir des propriétés privées en utilisant le mot-clé private.
     private speed: Vector; // Vecteur de vitesse de la balle, avec des composantes x et y
     private ballImage: HTMLImageElement = new Image(); // Image HTML de la balle
 
